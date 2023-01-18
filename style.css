@@ -81,8 +81,8 @@ main img {
     z-index: 1;
     top: 40px;
     border-radius: 42%;
-    transform: rotateX(163deg) translateZ(19px) scale(1.03);
-    -webkit-transform: rotateX(163deg) translateZ(19px) scale(1.03);
+    transform: rotateX(163deg) translateZ(19px) scale(1.04);
+    -webkit-transform: rotateX(163deg) translateZ(19px) scale(1.04);
 }
 .face:after {
     content: " ";
@@ -139,7 +139,7 @@ main img {
     left: 79px;
     z-index: 2;
     transform: rotateZ(1.25deg);
-    /*-webkit-transform: translateX(5px) translateY(-2px) rotateZ(7.5deg) rotateY(18deg)*/
+    -webkit-transform: rotateZ(1.25deg);
 }
 .face-layer-2:after {
     content: " ";
@@ -152,7 +152,7 @@ main img {
     left: 109px;
     z-index: 4;
     transform: rotateZ(0.7deg) rotateY(0deg);
-    /*-webkit-transform: translateX(3px) rotateZ(0.7deg) rotateY(0deg);*/
+    -webkit-transform: rotateZ(0.7deg) rotateY(0deg);
 }
 .eye {
     position: absolute;
