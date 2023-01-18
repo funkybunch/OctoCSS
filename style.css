@@ -61,12 +61,17 @@ main img {
 .head {
     background-color: var(--body-color);
 }
+.face {
+    perspective: unset;
+    transform-style: unset;
+    -webkit-transform-style: unset;
+}
 .eyes, .ears {
     left: auto;
     top: 0;
     z-index: 5;
 }
-.head::before {
+.head:before {
     content: " ";
     position: absolute;
     background-color: var(--body-color);
@@ -74,12 +79,12 @@ main img {
     height: 260px;
     left: 4px;
     z-index: 1;
-    top: 31px;
+    top: 40px;
     border-radius: 42%;
-    transform: rotateX(163deg);
-    -webkit-transform: rotateX(163deg);
+    transform: rotateX(163deg) translateZ(19px) scale(1.03);
+    -webkit-transform: rotateX(163deg) translateZ(19px) scale(1.03);
 }
-.face::after {
+.face:after {
     content: " ";
     position: absolute;
     background-color: var(--body-color);
@@ -99,7 +104,7 @@ main img {
     z-index: 3;
     height: 100%;
 }
-.face-layer-1::before {
+.face-layer-1:before {
     content: " ";
     position: absolute;
     background-color: var(--face-color);
@@ -111,7 +116,7 @@ main img {
     transform: rotateZ(36deg) rotateY(35deg);
     -webkit-transform: rotateZ(36deg) rotateY(35deg);
 }
-.face-layer-1::after {
+.face-layer-1:after {
     content: " ";
     position: absolute;
     background-color: var(--face-color);
@@ -123,20 +128,20 @@ main img {
     transform: rotateZ(-36deg) rotateY(-35deg);
     -webkit-transform: rotateZ(-36deg) rotateY(-35deg);
 }
-.face-layer-2::before {
+.face-layer-2:before {
     content: " ";
     position: absolute;
     background-color: var(--face-color);
-    width: 211px;
-    height: 42px;
-    bottom: -23px;
+    width: 202px;
+    height: 58px;
+    bottom: -25px;
     border-radius: 50%;
-    left: 73px;
+    left: 79px;
     z-index: 2;
-    transform: rotateZ(1.5deg) rotateY(25deg);
+    transform: rotateZ(1.25deg);
     /*-webkit-transform: translateX(5px) translateY(-2px) rotateZ(7.5deg) rotateY(18deg)*/
 }
-.face-layer-2::after {
+.face-layer-2:after {
     content: " ";
     position: absolute;
     background-color: var(--face-color);
@@ -152,15 +157,16 @@ main img {
 .eye {
     position: absolute;
     background-color: var(--eye-color);
-    width: 56px;
-    height: 80px;
+    width: 50px;
+    height: 72px;
     border-radius: 50%;
-    bottom: 19px;
-    left: 80px;
+    bottom: 29px;
+    left: 90px;
+    transform: translateZ(40px);
 }
 .eye:last-of-type {
     left: auto;
-    right: 72px;
+    right: 83px;
 }
 .eye:after {
     content: " ";
@@ -168,8 +174,8 @@ main img {
     background-color: var(--iris-color);
     width: 70%;
     height: 70%;
-    left: 9px;
-    top: 13px;
+    left: 16%;
+    top: 15%;
     border-radius: 50%;
 }
 .nose {
@@ -285,15 +291,18 @@ main img {
     transform: rotateZ(6deg);
     -webkit-transform: rotateZ(6deg);
 }
-.legs, .arm {
+.arm {
     perspective: 420px;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
+    transform-style: unset;
+    -webkit-transform-style: unset;
     z-index: 1;
     position: relative;
 }
 .legs {
     z-index: 2;
+    perspective: unset;
+    transform-style: unset;
+    -webkit-transform-style: unset;
 }
 .leg {
     position: absolute;
@@ -501,6 +510,7 @@ main img {
     -webkit-transform: rotateY(180deg);
     left: auto;
     right: calc(50% - 88px);
+    z-index: 5;
 }
 .feet-reflection {
     position: relative;
@@ -541,8 +551,8 @@ main img {
     width: 72px;
     height: 39px;
     border-radius: 50%;
-    left: 2px;
-    top: -25px;
+    left: 1px;
+    top: -26px;
     transform: rotateZ(7deg);
     -webkit-transform: rotateZ(7deg);
     z-index: 2;
