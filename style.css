@@ -51,11 +51,12 @@ main img {
     height: 238px;
     left: 118px;
     right: auto;
-    z-index: 1;
+    z-index: 3;
     top: 56px;
     border-radius: 50%;
     perspective: 420px;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 .head {
     background-color: var(--body-color);
@@ -72,10 +73,11 @@ main img {
     width: 350px;
     height: 260px;
     left: 4px;
-    z-index: 2;
+    z-index: 1;
     top: 31px;
     border-radius: 42%;
     transform: rotateX(163deg);
+    -webkit-transform: rotateX(163deg);
 }
 .face::after {
     content: " ";
@@ -88,6 +90,7 @@ main img {
     left: 106px;
     top: 108.5px;
     transform: rotateZ(1deg);
+    -webkit-transform: rotateZ(1deg);
 }
 .face-layer-1, face-layer-2 {
     position: relative;
@@ -106,6 +109,7 @@ main img {
     border-radius: 50%;
     left: 27px;
     transform: rotateZ(36deg) rotateY(35deg);
+    -webkit-transform: rotateZ(36deg) rotateY(35deg);
 }
 .face-layer-1::after {
     content: " ";
@@ -117,17 +121,20 @@ main img {
     border-radius: 50%;
     right: 22px;
     transform: rotateZ(-36deg) rotateY(-35deg);
+    -webkit-transform: rotateZ(-36deg) rotateY(-35deg);
 }
 .face-layer-2::before {
     content: " ";
     position: absolute;
     background-color: var(--face-color);
-    width: 59%;
+    width: 211px;
     height: 42px;
     bottom: -23px;
     border-radius: 50%;
     left: 73px;
+    z-index: 2;
     transform: rotateZ(1.5deg) rotateY(25deg);
+    /*-webkit-transform: translateX(5px) translateY(-2px) rotateZ(7.5deg) rotateY(18deg)*/
 }
 .face-layer-2::after {
     content: " ";
@@ -140,6 +147,7 @@ main img {
     left: 109px;
     z-index: 4;
     transform: rotateZ(0.7deg) rotateY(0deg);
+    /*-webkit-transform: translateX(3px) rotateZ(0.7deg) rotateY(0deg);*/
 }
 .eye {
     position: absolute;
@@ -182,6 +190,7 @@ main img {
     border-color: transparent var(--nose-mouth-color) var(--nose-mouth-color) transparent;
     border-radius: 50%;
     transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
     left: calc(50% - 14px);
     position: absolute;
     bottom: -6px;
@@ -215,11 +224,13 @@ main img {
     border-radius: 50%;
     background-color: var(--body-color);
     transform: rotateZ(298deg);
+    -webkit-transform: rotateZ(298deg);
     left: -52px;
     top: -59px;
 }
 .ear:last-of-type {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     left: auto;
     right: 38px;
 }
@@ -230,11 +241,13 @@ main img {
     border-radius: 50%;
     background-color: var(--body-color);
     transform: rotateZ(353deg);
+    -webkit-transform: rotateZ(353deg);
     top: 103px;
     left: 1px;
 }
 .cheek:last-of-type {
     transform: rotateZ(7deg);
+    -webkit-transform: rotateZ(7deg);
     left: auto;
     right: 1px;
 }
@@ -242,33 +255,40 @@ main img {
     position: absolute;
     width: 200px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 32%;
     border-width: 3px;
     border-style: solid;
     border-color: var(--body-color) transparent transparent transparent;
     z-index: 1;
     bottom: 20px;
     left: -120px;
+    transform: rotateZ(-1deg);
+    -webkit-transform: rotateZ(-1deg);
 }
 .whisker:nth-of-type(2) {
     bottom: 4px;
     left: -125px;
     transform: rotateZ(355deg);
+    -webkit-transform: rotateZ(355deg);
 }
 .whisker:nth-of-type(3) {
     bottom: 20px;
     left: auto;
     right: -132px;
+    transform: rotateZ(1deg);
+    -webkit-transform: rotateZ(1deg);
 }
 .whisker:nth-of-type(4) {
     bottom: 4px;
     left: auto;
     right: -131px;
     transform: rotateZ(6deg);
+    -webkit-transform: rotateZ(6deg);
 }
 .legs, .arm {
     perspective: 420px;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     z-index: 1;
     position: relative;
 }
@@ -294,6 +314,7 @@ main img {
     height: 29px;
     border-radius: 50%;
     transform: rotateZ(300deg);
+    -webkit-transform: rotateZ(300deg);
     top: 10px;
     left: -8px;
 }
@@ -305,6 +326,7 @@ main img {
     height: 29px;
     border-radius: 50%;
     transform: rotateZ(60deg);
+    -webkit-transform: rotateZ(60deg);
     top: 10px;
     right: -8px;
 }
@@ -419,6 +441,7 @@ main img {
     top: 3px;
     border-radius: 50%;
     transform: rotateZ(316deg);
+    -webkit-transform: rotateZ(316deg);
 }
 .foot:after {
     content: " ";
@@ -431,6 +454,7 @@ main img {
     top: 18.7px;
     border-radius: 50%;
     transform: rotateZ(-15deg);
+    -webkit-transform: rotateZ(-15deg);
 }
 .foot:nth-of-type(2) {
     left: calc(50% - 49px);
@@ -444,6 +468,7 @@ main img {
     width: 37px;
     height: 20px;
     transform: rotateZ(309deg);
+    -webkit-transform: rotateZ(309deg);
 }
 .foot:nth-of-type(2):after {
     top: 29px;
@@ -455,6 +480,7 @@ main img {
     width: 44px;
     height: 44px;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     left: auto;
 }
 .foot:nth-of-type(3):before {
@@ -463,6 +489,7 @@ main img {
     width: 37px;
     height: 20px;
     transform: rotateZ(309deg) rotateY(180deg);
+    -webkit-transform: rotateZ(309deg) rotateY(180deg);
 }
 .foot:nth-of-type(3):after {
     top: 29px;
@@ -471,6 +498,7 @@ main img {
 }
 .foot:nth-of-type(4) {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     left: auto;
     right: calc(50% - 88px);
 }
@@ -480,6 +508,7 @@ main img {
 }
 .feet-reflection .foot {
     transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
     opacity: .2;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,.2) 80%, rgba(0,0,0,0) 100%);
 }
@@ -489,10 +518,12 @@ main img {
 .feet-reflection .foot:nth-of-type(3) {
     top: 451px;
     transform: rotateX(180deg) rotateY(180deg);
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
 }
 .feet-reflection .foot:nth-of-type(4) {
     top: 453px;
     transform: rotateX(180deg) rotateY(180deg);
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
 }
 .bicep {
     position: absolute;
@@ -501,6 +532,7 @@ main img {
     background-color: var(--body-color);
     top: 353px;
     left: calc(50% - 141px);
+    z-index: 1;
 }
 .bicep:before {
     content: " ";
@@ -512,6 +544,7 @@ main img {
     left: 2px;
     top: -25px;
     transform: rotateZ(7deg);
+    -webkit-transform: rotateZ(7deg);
     z-index: 2;
 }
 .bicep:after {
@@ -525,6 +558,7 @@ main img {
     left: -1px;
     z-index: 1;
     transform: rotateZ(5deg);
+    -webkit-transform: rotateZ(5deg);
 }
 .forearm {
     position: absolute;
@@ -535,6 +569,7 @@ main img {
     left: calc(50% - 192px);
     border-radius: 50%;
     transform: rotateX(70deg) rotateZ(43.5deg);
+    -webkit-transform: rotateX(70deg) rotateZ(43.5deg);
 }
 .forearm:after {
     content: " ";
@@ -547,6 +582,7 @@ main img {
     left: -22px;
     z-index: 1;
     transform: rotateZ(6deg);
+    -webkit-transform: rotateZ(6deg);
 }
 .hand {
     position: absolute;
@@ -557,6 +593,7 @@ main img {
     left: calc(50% - 199px);
     border-radius: 50%;
     transform: rotateZ(35.5deg);
+    -webkit-transform: rotateZ(35.5deg);
     z-index: 2;
 }
 .hand:before {
@@ -567,6 +604,7 @@ main img {
     background-color: var(--body-color);
     border-radius: 50%;
     transform: rotateZ(-26deg);
+    -webkit-transform: rotateZ(-26deg);
     top: 4px;
     left: -7px;
 }
@@ -580,6 +618,7 @@ main img {
     top: 24px;
     left: -17px;
     transform: rotateZ(15deg);
+    -webkit-transform: rotateZ(15deg);
 }
 .drop {
     position: absolute;
